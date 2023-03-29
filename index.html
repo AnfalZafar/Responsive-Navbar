@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/0962378758.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<nav>
+<h4 href="" class="logo">Logo</h4>
+<!-- <label for=""><i class="fa-solid fa-bars"></i></label> -->
+<!-- <input type="checkbox" name="" id="toogle"> -->
+
+    <ul class="list">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact US</a></li>
+        <li><a href="">About US</a></li>
+        <li><a href="">Services</a></li>
+
+    </ul>
+
+<div for="" id="hp">
+    <div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</div>
+
+</nav>
+
+
+<script>
+
+const navSlide = () => {
+    const burger = document.getElementById("hp");
+    const list = document.querySelector(".list");
+const navliks = document.querySelectorAll(".list li")
+
+
+    burger.addEventListener("click" , ()=>{
+        list.classList.toggle("list-active");
+    })
+    
+    navliks.forEach((link , index)=>{
+        link.style.animation = `navlinkFade 0.5s ease forwards ${index / 7 + 0.3}s`
+        
+    })
+}
+
+navSlide();
+
+
+</script>
+
+</body>
+</html>
